@@ -4,16 +4,16 @@ import os
 def main():
     c_sc = 0
     u_sc = 0
-    comp_in = str(randint(1,3))
     user_in = 4
     while user_in != '0':
+        comp_in = str(randint(1,3))
         try:
             user_in = str(input("Wish to play Press\n 0 to EXIT\n 1 for Rock\n 2 for Paper \n 3 for Scissor \n 4 for Score\n\n"))
             clear()
         except:
             clear()
             print("Invalid input try again\n")
-            continue
+            user_in = 4
         if comp_in == user_in:
             print("It's a Draw\n")
         else:
